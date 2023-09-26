@@ -29,17 +29,16 @@ if (m < 1)
     min = n;
  }
 int sum = 0;
-FindSum(min, max);
-Console.WriteLine(sum);
+Console.WriteLine(FindSum(min, max));
 
-void FindSum (int min, int max){
+int FindSum (int min, int max){
 if (min-1 == max)
 {
-    return;
+    return sum;
 }
 else
 {
 sum = sum + min;
-FindSum(min+1, max);
+return FindSum(min+1, max);
 }
 }
